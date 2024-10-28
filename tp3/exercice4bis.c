@@ -54,6 +54,4 @@ int main() {
     } else {
         printf("\nVous êtes ruiné\n");
     }
-
-    return 0;
 }

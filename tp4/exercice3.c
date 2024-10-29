@@ -1,8 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 char *def_concat(char* first, char* second){
 
-    char concat[200];
+    char *concat = malloc(200);
     int i = 0;
     int j = 0;
 
@@ -18,7 +19,7 @@ char *def_concat(char* first, char* second){
     } while(second[j] != '\0');
 
     concat[i] = '\0';
-    
+
     printf("Chaines concatenées : %s\n",concat);
     return concat;
 
@@ -35,6 +36,12 @@ int main(){
     printf("Entrez une deuxième chaine de caractères : ");
     scanf(" %s", tab_second);
 
-    def_concat(tab_first, tab_second);
+    char *a = def_concat(tab_first, tab_second);
+
+    //def_concat(tab_first, tab_second);
+
+    printf("%s", a);
+
+    free(a);
 
 }

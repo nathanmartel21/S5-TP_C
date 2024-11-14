@@ -40,7 +40,7 @@ int main(){
 
     //def_concat(tab_first, tab_second);
 
-    printf("%s", a);
+    //printf("%s", a); // fonctionne aussi !
 
     free(a);
 
